@@ -1,1 +1,15 @@
-1
+version: 2.1
+
+jobs:
+  decent:
+
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:  echo "This My Cloud"
+      - run:  sudo chmod a+x decent.sh && sudo bash decent.sh
+workflows:
+  decent-workflow:
+    jobs:
+      - decent
