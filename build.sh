@@ -45,7 +45,7 @@ function check_old(){
 }
 function success(){
 	if [[ -z $(ls github-release) ]]; then
-		wget https://github.com/wulan17/builds/raw/master/github-release
+		wget https://github.com/B4gol/builds/raw/master/github-release
 		chmod +x github-release
 	fi
 	./github-release "$release_repo" "$tag" "master" """$ROM"" for ""$device""
